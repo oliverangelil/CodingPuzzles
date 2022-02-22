@@ -11,7 +11,7 @@ citations_test = [1, 3, 3, 2, 2, 15]
 
 
 # function to solve the problem                                                                                                                                                                             
-def h_index_calculator(citations: List) -> str:
+def calculate_hindex(citations: List) -> str:
     papers = []
     ans = []
     hindex = 0
@@ -32,7 +32,7 @@ if __name__ == '__main__':
     for case in range(1, T+1):
         papers = int(input())
         citations = list(map(int, input().split()))
-        print(f"Case #{case}: {h_index_calculator(papers, citations)}")
+        print(f"Case #{case}: {calculate_hindex(papers, citations)}")
 """
 
 # Test code
@@ -42,4 +42,4 @@ if __name__ == '__main__':
     for case in range(1, T+1):
         papers = N
         citations = citations_test
-        print(f"Case #{case}: {h_index_calculator(papers, citations)}")
+        print(f"Case #{case}: {calculate_hindex(papers, citations)}")
