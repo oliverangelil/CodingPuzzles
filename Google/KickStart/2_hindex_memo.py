@@ -12,7 +12,7 @@ citations_test = [1, 3, 3, 2, 2, 15]
 
 
 # function to solve the problem                                                                                                                                                                             
-def calculate_hindex(N: int citations: List) -> str:
+def calculate_hindex(N: int, citations: List) -> str:
     minH = []
     ans = []
     hindex = 0
@@ -23,7 +23,7 @@ def calculate_hindex(N: int citations: List) -> str:
         heapq.heappop(minH)
       if len(minH) >= hindex+1:
         hindex += 1
-        ans.append(hindex)
+      ans.append(hindex)
 
     return ans
     
